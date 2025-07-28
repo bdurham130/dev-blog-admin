@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Blog Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dev Blog Admin</a>
+      <a href="https://bdurham130.github.io/dev-blog-data/data.json" target="_blank" class="btn btn-outline-light btn-sm">View JSON</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPostModal">
+        <i class="bi bi-plus-circle"></i> Add Post
+      </button>
+      <input type="text" id="searchInput" class="form-control w-50" placeholder="Search posts...">
+    </div>
+
+    <div id="blogContainer" class="row g-4"></div>
+  </div>
+
+  <!-- Footer Links -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <p class="mb-0">
+    <a href="https://github.com/bdurham130" class="text-decoration-none text-info" target="_blank">My GitHub</a> |
+    <a href="https://github.com/bdurham130/dev-blog-admin" class="text-decoration-none text-info" target="_blank">Source Code</a> |
+    <a href="https://bdurham130.github.io/Dev-Profile/" class="text-decoration-none text-info" target="_blank">DevProfile</a> |
+    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fbdurham130.github.io%2Fdev-blog-admin%2F" class="text-decoration-none text-info" target="_blank">Check Validity</a> |
+    <a href="https://wave.webaim.org/report#/https://bdurham130.github.io/dev-blog-admin/" class="text-decoration-none text-info" target="_blank">Accessibility Check</a>
+  </p>
+</footer>
+
+  <!-- Add Post Modal -->
+  <div class="modal fade" id="addPostModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">New Blog Post</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input class="form-control mb-2" id="titleInput" placeholder="Title">
+          <textarea class="form-control mb-2" id="contentInput" placeholder="Content"></textarea>
+          <input class="form-control mb-2" id="tagsInput" placeholder="Tags (comma-separated)">
+          <input class="form-control mb-2" id="linkInput" placeholder="Link">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" id="savePostBtn" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast text-white bg-success" id="successToast">
+      <div class="toast-body">Post added!</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
