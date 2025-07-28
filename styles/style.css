@@ -1,0 +1,20 @@
+body {
+  background: #f5f7fa;
+}
+
+.card {
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+input, textarea {
+  border-radius: 0.5rem;
+}
+
+.badge {
+  margin-right: 0.25rem;
+}
