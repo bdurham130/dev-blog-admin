@@ -7,7 +7,7 @@ This is a front-end interface for managing and displaying blog posts using exter
 ## 🚀 Live Site
 
 👉 [Visit the Blog Admin](https://bdurham130.github.io/dev-blog-admin/) 
-👉 [View JSON Data Source](https://bdurham130.github.com/dev-blog-data/)
+👉 [View JSON Data Source](https://bdurham130.github.io/dev-blog-data/data.json)
 
 ---
 
